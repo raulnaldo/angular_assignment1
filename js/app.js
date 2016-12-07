@@ -1,3 +1,4 @@
+//Version 1.1
 (function () {
 'use strict';
 
@@ -16,6 +17,7 @@ function LunchCheckController ($scope, $filter) {
       var totalItems=CountItemsFromString($scope.menu_items);      
       if (totalItems == 0){
         $scope.myMessage="Please enter data first";
+        $scope.menu_items="";
       }
       else{
         if (totalItems < 4){
@@ -41,3 +43,6 @@ function LunchCheckController ($scope, $filter) {
 }
 
 })();
+
+//Minifyed
+// !function(){"use strict";function e(e,n){e.myMessage="",e.menu_items="",e.separeMenuItems=function(){e.myMessage="";var n=s(e.menu_items);0==n?(e.myMessage="Please enter data first",e.menu_items=""):4>n?e.myMessage="Enjoy!":e.myMessage="Too much!"};var s=function(e){for(var n=0,s=e.split(","),t=0;t<s.length;t++)""!=s[t]&&(n+=1);return n}}angular.module("LunchApp",[]).controller("LunchCheckController",e),e.$inject=["$scope","$filter"]}();
